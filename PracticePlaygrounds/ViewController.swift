@@ -10,13 +10,14 @@ import UIKit
 class ViewController: UIViewController {
   var button: UIButton = UIButton()
   var button2: UIButton = UIButton()
+  var button3: UIButton = UIButton()
+  
+  var stackView = UIStackView()
   
   override func viewDidLoad() {
     super.viewDidLoad()
    
     view.backgroundColor = .white
-    view.addSubview(button)
-    view.addSubview(button2)
     button.setTitle("Move", for: .normal)
     button.backgroundColor = .blue
     button.addTarget(self, action: #selector(tap), for: .touchUpInside)
@@ -24,6 +25,27 @@ class ViewController: UIViewController {
     button2.setTitle("Waterfall", for: .normal)
     button2.backgroundColor = .blue
     button2.addTarget(self, action: #selector(waterfall), for: .touchUpInside)
+    
+    button3.setTitle("Photo picker", for: [])
+    button3.backgroundColor = .blue
+    button3.addTarget(self, action: #selector(imagePicker), for: .touchUpInside)
+    
+    stackView.axis = .vertical
+    stackView.backgroundColor = .white
+    stackView.distribution = .equalSpacing
+    stackView.alignment = .center
+    stackView.translatesAutoresizingMaskIntoConstraints = false
+    stackView.addArrangedSubview(button)
+    stackView.addArrangedSubview(button2)
+    stackView.addArrangedSubview(button3)
+    
+    view.addSubview(stackView)
+    NSLayoutConstraint.activate([
+      stackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+      stackView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+      stackView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor),
+      stackView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor)
+    ])
   }
   
   @objc func tap() {
@@ -36,10 +58,8 @@ class ViewController: UIViewController {
     navigationController?.pushViewController(vc, animated: true)
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    
-    button.frame = CGRect(x: 100, y: 100, width: 100, height: 40)
-    button2.frame = CGRect(x: 100, y: 200, width: 100, height: 40)
+  @objc func imagePicker() {
+    let vc = PhotoPickerLandingViewController()
+    navigationController?.pushViewController(vc, animated: true)
   }
 }
