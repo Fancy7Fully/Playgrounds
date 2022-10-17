@@ -13,6 +13,7 @@ class PhotoPickerLandingViewController: UIViewController {
   private var button: UIButton = UIButton()
   private var picker: UIImagePickerController = UIImagePickerController()
   private var placeholderView: UIImageView = UIImageView()
+  private var visualEffectView: UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -33,6 +34,7 @@ class PhotoPickerLandingViewController: UIViewController {
     placeholderView.backgroundColor = .clear
     placeholderView.layer.borderColor = UIColor.cyan.cgColor
     placeholderView.layer.borderWidth = 2.0
+    placeholderView.addSubview(visualEffectView)
     
     NSLayoutConstraint.activate([
       placeholderView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -42,6 +44,8 @@ class PhotoPickerLandingViewController: UIViewController {
       button.topAnchor.constraint(equalTo: placeholderView.bottomAnchor, constant: 30.0),
       button.centerXAnchor.constraint(equalTo: view.centerXAnchor)
     ])
+    visualEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    visualEffectView.isHidden = true
   }
   
   @objc private func didTapPicker() {
@@ -66,6 +70,8 @@ extension PhotoPickerLandingViewController: UIImagePickerControllerDelegate, UIN
       picker.dismiss(animated: true)
       return
     }
+    visualEffectView.isHidden = false
+    visualEffectView.bringSubviewToFront(visualEffectView)
     placeholderView.image = image
     placeholderView.contentMode = .scaleToFill
     picker.dismiss(animated: true)
