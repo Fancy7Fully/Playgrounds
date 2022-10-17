@@ -11,6 +11,7 @@ class ViewController: UIViewController {
   var button: UIButton = UIButton()
   var button2: UIButton = UIButton()
   var button3: UIButton = UIButton()
+  var webViewButton: UIButton = UIButton()
   
   var stackView = UIStackView()
   
@@ -30,6 +31,10 @@ class ViewController: UIViewController {
     button3.backgroundColor = .blue
     button3.addTarget(self, action: #selector(imagePicker), for: .touchUpInside)
     
+    webViewButton.setTitle("Webview", for: [])
+    webViewButton.backgroundColor = .blue
+    webViewButton.addTarget(self, action: #selector(didTapWebview), for: .touchUpInside)
+    
     stackView.axis = .vertical
     stackView.backgroundColor = .white
     stackView.distribution = .equalSpacing
@@ -38,6 +43,7 @@ class ViewController: UIViewController {
     stackView.addArrangedSubview(button)
     stackView.addArrangedSubview(button2)
     stackView.addArrangedSubview(button3)
+    stackView.addArrangedSubview(webViewButton)
     
     view.addSubview(stackView)
     NSLayoutConstraint.activate([
@@ -46,6 +52,11 @@ class ViewController: UIViewController {
       stackView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor),
       stackView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor)
     ])
+  }
+  
+  @objc func didTapWebview() {
+    let vc = WebviewViewController()
+    navigationController?.pushViewController(vc, animated: true)
   }
   
   @objc func tap() {
