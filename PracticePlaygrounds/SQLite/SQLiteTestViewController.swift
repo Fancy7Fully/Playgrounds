@@ -45,7 +45,7 @@ class SQLiteTestViewController: UIViewController {
         t.column(email, unique: true)  //     "email" TEXT UNIQUE NOT NULL,
         t.column(name)                 //     "name" TEXT
       })
-      try db.run(users.insert(email <- "alice@mac.com", name <- "Alice"))
+//      try db.run(users.insert(email <- "alice@mac.com", name <- "Alice"))
     } catch {
       print(error)
     }
@@ -53,6 +53,9 @@ class SQLiteTestViewController: UIViewController {
     do {
       let exists = try db.scalar(users.exists)
       print("User table existence status: \(exists)")
+//      if exists {
+//        try db.run(users.insert(email <- "alice@mac.com", name <- "Alice"))
+//      }
     } catch {
       print(error)
     }
