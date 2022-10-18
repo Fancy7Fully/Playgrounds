@@ -1,0 +1,6 @@
+framework module Pods_PracticePlaygrounds {
+  umbrella header "Pods-PracticePlaygrounds-umbrella.h"
+
+  export *
+  module * { export * }
+}

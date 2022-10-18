@@ -12,6 +12,7 @@ class ViewController: UIViewController {
   var button2: UIButton = UIButton()
   var button3: UIButton = UIButton()
   var webViewButton: UIButton = UIButton()
+  var sqliteButton = UIButton()
   
   var stackView = UIStackView()
   
@@ -35,6 +36,10 @@ class ViewController: UIViewController {
     webViewButton.backgroundColor = .blue
     webViewButton.addTarget(self, action: #selector(didTapWebview), for: .touchUpInside)
     
+    sqliteButton.setTitle("SQLite", for: [])
+    sqliteButton.backgroundColor = .blue
+    sqliteButton.addTarget(self, action: #selector(didTapSQLite), for: .touchUpInside)
+    
     stackView.axis = .vertical
     stackView.backgroundColor = .white
     stackView.distribution = .equalSpacing
@@ -44,6 +49,7 @@ class ViewController: UIViewController {
     stackView.addArrangedSubview(button2)
     stackView.addArrangedSubview(button3)
     stackView.addArrangedSubview(webViewButton)
+    stackView.addArrangedSubview(sqliteButton)
     
     view.addSubview(stackView)
     NSLayoutConstraint.activate([
@@ -52,6 +58,11 @@ class ViewController: UIViewController {
       stackView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor),
       stackView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor)
     ])
+  }
+  
+  @objc func didTapSQLite() {
+    let vc = SQLiteTestViewController()
+    navigationController?.pushViewController(vc, animated: true)
   }
   
   @objc func didTapWebview() {
