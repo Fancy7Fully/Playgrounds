@@ -18,6 +18,8 @@
 		95FCD62C28EBFB9C00D007A4 /* PhotoPickerLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FCD62B28EBFB9C00D007A4 /* PhotoPickerLandingViewController.swift */; };
 		95FCD62F28FCD2AA00D007A4 /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FCD62E28FCD2AA00D007A4 /* WebviewViewController.swift */; };
 		95FCD63228FE3BF000D007A4 /* SQLiteTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FCD63128FE3BF000D007A4 /* SQLiteTestViewController.swift */; };
+		95FCD63428FF98FF00D007A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95FCD63328FF98FF00D007A4 /* GoogleService-Info.plist */; };
+		95FCD63728FF9B6700D007A4 /* FirebaseTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FCD63628FF9B6700D007A4 /* FirebaseTestViewController.swift */; };
 		CD46FF26EF29961300BBD3D0 /* Pods_PracticePlaygrounds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E25891306EF44478642683 /* Pods_PracticePlaygrounds.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		95FCD62B28EBFB9C00D007A4 /* PhotoPickerLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerLandingViewController.swift; sourceTree = "<group>"; };
 		95FCD62E28FCD2AA00D007A4 /* WebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
 		95FCD63128FE3BF000D007A4 /* SQLiteTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteTestViewController.swift; sourceTree = "<group>"; };
+		95FCD63328FF98FF00D007A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		95FCD63628FF9B6700D007A4 /* FirebaseTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTestViewController.swift; sourceTree = "<group>"; };
 		C26541028FBD7C64DA931610 /* Pods-PracticePlaygrounds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticePlaygrounds.release.xcconfig"; path = "Target Support Files/Pods-PracticePlaygrounds/Pods-PracticePlaygrounds.release.xcconfig"; sourceTree = "<group>"; };
 		D9E25891306EF44478642683 /* Pods_PracticePlaygrounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticePlaygrounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +86,8 @@
 		950B4AFE2876782B00B9F974 /* PracticePlaygrounds */ = {
 			isa = PBXGroup;
 			children = (
+				95FCD63528FF9B5400D007A4 /* Firebase */,
+				95FCD63328FF98FF00D007A4 /* GoogleService-Info.plist */,
 				95FCD63028FE3BE000D007A4 /* SQLite */,
 				95FCD62D28FCD22900D007A4 /* WebView */,
 				95FCD62A28EBFB8600D007A4 /* Image */,
@@ -128,6 +134,14 @@
 				95FCD63128FE3BF000D007A4 /* SQLiteTestViewController.swift */,
 			);
 			path = SQLite;
+			sourceTree = "<group>";
+		};
+		95FCD63528FF9B5400D007A4 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				95FCD63628FF9B6700D007A4 /* FirebaseTestViewController.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		9B76BFFECE088A3D1C76EA38 /* Frameworks */ = {
@@ -199,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				950B4B0C2876782D00B9F974 /* LaunchScreen.storyboard in Resources */,
+				95FCD63428FF98FF00D007A4 /* GoogleService-Info.plist in Resources */,
 				950B4B092876782D00B9F974 /* Assets.xcassets in Resources */,
 				950B4B072876782B00B9F974 /* Main.storyboard in Resources */,
 			);
@@ -255,6 +270,7 @@
 			files = (
 				950B4B042876782B00B9F974 /* ViewController.swift in Sources */,
 				950B4B002876782B00B9F974 /* AppDelegate.swift in Sources */,
+				95FCD63728FF9B6700D007A4 /* FirebaseTestViewController.swift in Sources */,
 				95FCD63228FE3BF000D007A4 /* SQLiteTestViewController.swift in Sources */,
 				95FCD62F28FCD2AA00D007A4 /* WebviewViewController.swift in Sources */,
 				950B4B14287AA7FA00B9F974 /* WaterfallController.swift in Sources */,
