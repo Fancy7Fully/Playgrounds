@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import FirebaseAnalytics
 
 class WaterfallController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
   
@@ -54,12 +55,12 @@ class WaterfallController: UIViewController, UICollectionViewDataSource, UIColle
     return cell
   }
   
-  func randomColor() -> UIColor{
+  func randomColor() -> UIColor {
       let red = CGFloat(drand48())
       let green = CGFloat(drand48())
       let blue = CGFloat(drand48())
       return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-}
+  }
 }
 
 class WaterfallCustomLayout: UICollectionViewFlowLayout {
@@ -116,7 +117,7 @@ class WaterfallCustomLayout: UICollectionViewFlowLayout {
   }
   
   override var collectionViewContentSize: CGSize {
-    var s = super.collectionViewContentSize
+    let s = super.collectionViewContentSize
     return CGSize(width: s.width, height: max(rightHeight, leftHeight))
   }
 }

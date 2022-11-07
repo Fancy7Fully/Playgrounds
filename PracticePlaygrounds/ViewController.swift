@@ -13,6 +13,8 @@ class ViewController: UIViewController {
   var button3: UIButton = UIButton()
   var webViewButton: UIButton = UIButton()
   var sqliteButton = UIButton()
+  var presentationButton = UIButton()
+  var delegate: UIViewControllerTransitioningDelegate?
   
   var stackView = UIStackView()
   
@@ -40,6 +42,10 @@ class ViewController: UIViewController {
     sqliteButton.backgroundColor = .blue
     sqliteButton.addTarget(self, action: #selector(didTapSQLite), for: .touchUpInside)
     
+    presentationButton.setTitle("Presentation", for: [])
+    presentationButton.backgroundColor = .blue
+    presentationButton.addTarget(self, action: #selector(didTapPresentation), for: .touchUpInside)
+    
     stackView.axis = .vertical
     stackView.backgroundColor = .white
     stackView.distribution = .equalSpacing
@@ -50,6 +56,7 @@ class ViewController: UIViewController {
     stackView.addArrangedSubview(button3)
     stackView.addArrangedSubview(webViewButton)
     stackView.addArrangedSubview(sqliteButton)
+    stackView.addArrangedSubview(presentationButton)
     
     view.addSubview(stackView)
     NSLayoutConstraint.activate([
@@ -58,6 +65,14 @@ class ViewController: UIViewController {
       stackView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor),
       stackView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor)
     ])
+  }
+  
+  @objc func didTapPresentation() {
+    let vc = PresentedViewController()
+    vc.modalPresentationStyle = .custom
+    delegate = PresentationTransitionDelegate()
+    vc.transitioningDelegate = delegate
+    self.present(vc, animated: true)
   }
   
   @objc func didTapSQLite() {
