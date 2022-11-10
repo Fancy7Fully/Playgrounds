@@ -9,8 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
   var button: UIButton = UIButton()
-  var button2: UIButton = UIButton()
-  var button3: UIButton = UIButton()
   var webViewButton: UIButton = UIButton()
   var sqliteButton = UIButton()
   var presentationButton = UIButton()
@@ -22,17 +20,9 @@ class ViewController: UIViewController {
     super.viewDidLoad()
    
     view.backgroundColor = .white
-    button.setTitle("Move", for: .normal)
+    button.setTitle("CollectionViews", for: .normal)
     button.backgroundColor = .blue
-    button.addTarget(self, action: #selector(tap), for: .touchUpInside)
-    
-    button2.setTitle("Waterfall", for: .normal)
-    button2.backgroundColor = .blue
-    button2.addTarget(self, action: #selector(waterfall), for: .touchUpInside)
-    
-    button3.setTitle("Photo picker", for: [])
-    button3.backgroundColor = .blue
-    button3.addTarget(self, action: #selector(imagePicker), for: .touchUpInside)
+    button.addTarget(self, action: #selector(collectionViews), for: .touchUpInside)
     
     webViewButton.setTitle("Webview", for: [])
     webViewButton.backgroundColor = .blue
@@ -52,8 +42,6 @@ class ViewController: UIViewController {
     stackView.alignment = .center
     stackView.translatesAutoresizingMaskIntoConstraints = false
     stackView.addArrangedSubview(button)
-    stackView.addArrangedSubview(button2)
-    stackView.addArrangedSubview(button3)
     stackView.addArrangedSubview(webViewButton)
     stackView.addArrangedSubview(sqliteButton)
     stackView.addArrangedSubview(presentationButton)
@@ -85,13 +73,8 @@ class ViewController: UIViewController {
     navigationController?.pushViewController(vc, animated: true)
   }
   
-  @objc func tap() {
-    let vc = RearrangableListViewController()
-    navigationController?.pushViewController(vc, animated: true)
-  }
-  
-  @objc func waterfall() {
-    let vc = WaterfallController()
+  @objc func collectionViews() {
+    let vc = CollectionViewLandingViewController()
     navigationController?.pushViewController(vc, animated: true)
   }
   

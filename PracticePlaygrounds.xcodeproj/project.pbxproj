@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		89CE329129177FC9006F0672 /* PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE329029177FC9006F0672 /* PresentedViewController.swift */; };
 		89CE3293291780CF006F0672 /* PresentationTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE3292291780CF006F0672 /* PresentationTransitionDelegate.swift */; };
+		89CE32952918E19B006F0672 /* CollectionViewLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE32942918E19B006F0672 /* CollectionViewLandingViewController.swift */; };
+		89CE32972918E6CA006F0672 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE32962918E6CA006F0672 /* CarouselViewController.swift */; };
 		950B4B002876782B00B9F974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B4AFF2876782B00B9F974 /* AppDelegate.swift */; };
 		950B4B022876782B00B9F974 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B4B012876782B00B9F974 /* SceneDelegate.swift */; };
 		950B4B042876782B00B9F974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B4B032876782B00B9F974 /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 		585325724A9CB7D07E8A80A4 /* Pods-PracticePlaygrounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticePlaygrounds.debug.xcconfig"; path = "Target Support Files/Pods-PracticePlaygrounds/Pods-PracticePlaygrounds.debug.xcconfig"; sourceTree = "<group>"; };
 		89CE329029177FC9006F0672 /* PresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedViewController.swift; sourceTree = "<group>"; };
 		89CE3292291780CF006F0672 /* PresentationTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationTransitionDelegate.swift; sourceTree = "<group>"; };
+		89CE32942918E19B006F0672 /* CollectionViewLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLandingViewController.swift; sourceTree = "<group>"; };
+		89CE32962918E6CA006F0672 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		950B4AFC2876782B00B9F974 /* PracticePlaygrounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticePlaygrounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		950B4AFF2876782B00B9F974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		950B4B012876782B00B9F974 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			children = (
 				950B4B13287AA7F900B9F974 /* WaterfallController.swift */,
 				95FCD62828E2973100D007A4 /* RearrangableListViewController.swift */,
+				89CE32942918E19B006F0672 /* CollectionViewLandingViewController.swift */,
+				89CE32962918E6CA006F0672 /* CarouselViewController.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 			files = (
 				950B4B042876782B00B9F974 /* ViewController.swift in Sources */,
 				89CE3293291780CF006F0672 /* PresentationTransitionDelegate.swift in Sources */,
+				89CE32972918E6CA006F0672 /* CarouselViewController.swift in Sources */,
 				950B4B002876782B00B9F974 /* AppDelegate.swift in Sources */,
 				95FCD63728FF9B6700D007A4 /* FirebaseTestViewController.swift in Sources */,
 				89CE329129177FC9006F0672 /* PresentedViewController.swift in Sources */,
@@ -293,6 +300,7 @@
 				95FCD62C28EBFB9C00D007A4 /* PhotoPickerLandingViewController.swift in Sources */,
 				950B4B022876782B00B9F974 /* SceneDelegate.swift in Sources */,
 				95FCD62928E2973100D007A4 /* RearrangableListViewController.swift in Sources */,
+				89CE32952918E19B006F0672 /* CollectionViewLandingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
