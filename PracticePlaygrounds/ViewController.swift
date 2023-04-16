@@ -12,6 +12,7 @@ class ViewController: UIViewController {
   var webViewButton: UIButton = UIButton()
   var sqliteButton = UIButton()
   var presentationButton = UIButton()
+  var childVCButton = UIButton()
   var delegate: UIViewControllerTransitioningDelegate?
   
   var stackView = UIStackView()
@@ -36,6 +37,10 @@ class ViewController: UIViewController {
     presentationButton.backgroundColor = .blue
     presentationButton.addTarget(self, action: #selector(didTapPresentation), for: .touchUpInside)
     
+    childVCButton.setTitle("Child VC", for: [])
+    childVCButton.backgroundColor = .blue
+    childVCButton.addTarget(self, action: #selector(didTapChildVCButton), for: .primaryActionTriggered)
+    
     stackView.axis = .vertical
     stackView.backgroundColor = .white
     stackView.distribution = .equalSpacing
@@ -45,6 +50,7 @@ class ViewController: UIViewController {
     stackView.addArrangedSubview(webViewButton)
     stackView.addArrangedSubview(sqliteButton)
     stackView.addArrangedSubview(presentationButton)
+    stackView.addArrangedSubview(childVCButton)
     
     view.addSubview(stackView)
     NSLayoutConstraint.activate([
@@ -80,6 +86,11 @@ class ViewController: UIViewController {
   
   @objc func imagePicker() {
     let vc = PhotoPickerLandingViewController()
+    navigationController?.pushViewController(vc, animated: true)
+  }
+  
+  @objc private func didTapChildVCButton() {
+    let vc = ChildVCLandingViewController()
     navigationController?.pushViewController(vc, animated: true)
   }
 }

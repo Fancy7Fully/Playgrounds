@@ -42,7 +42,7 @@ class CollectionViewLandingViewController: UIViewController {
   }
   
   @objc private func didTapWaterfall() {
-    let vc = WaterfallController()
+    let vc = PageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     navigationController?.pushViewController(vc, animated: true)
   }
   
@@ -52,6 +52,7 @@ class CollectionViewLandingViewController: UIViewController {
   }
   
   @objc private func didTapCarousel() {
-    
+    let vc = CarouselViewController(collectionViewLayout: ZoomAndSnapFlowLayout())
+    navigationController?.pushViewController(vc, animated: true)
   }
 }
