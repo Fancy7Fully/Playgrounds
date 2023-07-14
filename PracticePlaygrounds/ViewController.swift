@@ -13,6 +13,7 @@ class ViewController: UIViewController {
   var sqliteButton = UIButton()
   var presentationButton = UIButton()
   var childVCButton = UIButton()
+  var chartsButton = UIButton()
   var delegate: UIViewControllerTransitioningDelegate?
   
   var stackView = UIStackView()
@@ -41,6 +42,10 @@ class ViewController: UIViewController {
     childVCButton.backgroundColor = .blue
     childVCButton.addTarget(self, action: #selector(didTapChildVCButton), for: .primaryActionTriggered)
     
+    chartsButton.setTitle("Charts", for: [])
+    chartsButton.backgroundColor = .blue
+    chartsButton.addTarget(self, action: #selector(didTapChartsButton), for: .primaryActionTriggered)
+    
     stackView.axis = .vertical
     stackView.backgroundColor = .white
     stackView.distribution = .equalSpacing
@@ -51,6 +56,7 @@ class ViewController: UIViewController {
     stackView.addArrangedSubview(sqliteButton)
     stackView.addArrangedSubview(presentationButton)
     stackView.addArrangedSubview(childVCButton)
+    stackView.addArrangedSubview(chartsButton)
     
     view.addSubview(stackView)
     NSLayoutConstraint.activate([
@@ -91,6 +97,11 @@ class ViewController: UIViewController {
   
   @objc private func didTapChildVCButton() {
     let vc = ChildVCLandingViewController()
+    navigationController?.pushViewController(vc, animated: true)
+  }
+  
+  @objc private func didTapChartsButton() {
+    let vc = ChartsViewController()
     navigationController?.pushViewController(vc, animated: true)
   }
 }

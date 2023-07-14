@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8937798729C17C9D002ED4F5 /* ChildVCLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8937798629C17C9D002ED4F5 /* ChildVCLandingViewController.swift */; };
 		8937798929E4F140002ED4F5 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8937798829E4F140002ED4F5 /* PageViewController.swift */; };
+		89B9C3812A15BF3E00731FD8 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9C3802A15BF3E00731FD8 /* ChartsViewController.swift */; };
 		89CE329129177FC9006F0672 /* PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE329029177FC9006F0672 /* PresentedViewController.swift */; };
 		89CE3293291780CF006F0672 /* PresentationTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE3292291780CF006F0672 /* PresentationTransitionDelegate.swift */; };
 		89CE32952918E19B006F0672 /* CollectionViewLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE32942918E19B006F0672 /* CollectionViewLandingViewController.swift */; };
@@ -33,6 +34,7 @@
 		585325724A9CB7D07E8A80A4 /* Pods-PracticePlaygrounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticePlaygrounds.debug.xcconfig"; path = "Target Support Files/Pods-PracticePlaygrounds/Pods-PracticePlaygrounds.debug.xcconfig"; sourceTree = "<group>"; };
 		8937798629C17C9D002ED4F5 /* ChildVCLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildVCLandingViewController.swift; sourceTree = "<group>"; };
 		8937798829E4F140002ED4F5 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		89B9C3802A15BF3E00731FD8 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		89CE329029177FC9006F0672 /* PresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedViewController.swift; sourceTree = "<group>"; };
 		89CE3292291780CF006F0672 /* PresentationTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationTransitionDelegate.swift; sourceTree = "<group>"; };
 		89CE32942918E19B006F0672 /* CollectionViewLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLandingViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 			path = ChildVC;
 			sourceTree = "<group>";
 		};
+		89B9C37F2A15BF3100731FD8 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				89B9C3802A15BF3E00731FD8 /* ChartsViewController.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 		89CE328F29177FB9006F0672 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		950B4AFE2876782B00B9F974 /* PracticePlaygrounds */ = {
 			isa = PBXGroup;
 			children = (
+				89B9C37F2A15BF3100731FD8 /* Charts */,
 				8937798529C17C8A002ED4F5 /* ChildVC */,
 				89CE328F29177FB9006F0672 /* Presentation */,
 				95FCD63528FF9B5400D007A4 /* Firebase */,
@@ -311,6 +322,7 @@
 				8937798929E4F140002ED4F5 /* PageViewController.swift in Sources */,
 				95FCD63228FE3BF000D007A4 /* SQLiteTestViewController.swift in Sources */,
 				95FCD62F28FCD2AA00D007A4 /* WebviewViewController.swift in Sources */,
+				89B9C3812A15BF3E00731FD8 /* ChartsViewController.swift in Sources */,
 				950B4B14287AA7FA00B9F974 /* WaterfallController.swift in Sources */,
 				95FCD62C28EBFB9C00D007A4 /* PhotoPickerLandingViewController.swift in Sources */,
 				950B4B022876782B00B9F974 /* SceneDelegate.swift in Sources */,
